@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="~/css/font-awesome.min.css" asp-append-version="false" />
         <!--[if lte IE 9]><link rel="stylesheet" href="~/css/ie9.css asp-append-version="false" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="~/css/ie8.css asp-append-version="false" /><![endif]-->
-    </environment> 
+    </environment>
 </head>
 <body>
     <!-- Wrapper -->
@@ -24,60 +24,57 @@
                 <!--  Header -->
                 @Html.Partial("~/Views/Shared/_Header.cshtml")
 
-                <div class="inner">
-
+                <div id="inner">
                     @RenderBody()
                     <hr />
-
                 </div>
-
                 <!--  Footer -->
                 @Html.Partial("~/Views/Shared/_Footer.cshtml")
 
-            </div>
-        </div>
-
-        <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-
-                <!-- Menu -->
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Menu</h2>
-                    </header>
-                    <ul>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Homepage</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerHowTo">Parabolic Solar Cooker How To</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerCalculator">Parabolic Solar Cooker Calculator</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    </ul>
-                </nav>
 
             </div>
 
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menu</h2>
+                        </header>
+                        <ul>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Homepage</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerHowTo">Parabolic Solar Cooker How To</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerCalculator">Parabolic Solar Cooker Calculator</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </div>
+
         </div>
 
-    </div>
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/js/skel.min.js"></script>
+            <script src="~/js/util.js"></script>
+            <!--[if lte IE 8]><script src="~/js/ie/respond.min.js"></script><![endif]-->
+            <script src="~/js/main.js"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+            </script>
+        </environment>
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/js/skel.min.js"></script>
-        <script src="~/js/util.js"></script>
-        <!--[if lte IE 8]><script src="~/js/ie/respond.min.js"></script><![endif]-->
-        <script src="~/js/main.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-    </environment>
-
-    @RenderSection("Scripts", required: false)
+        @RenderSection("Scripts", required: false)
 
 </body>
 </html>
