@@ -1,14 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <title>@ViewData["Title"] - Using Solar Power To Save Lives</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>@ViewData["Title"] - Using Solar Power To Save Lives</title>
 
     <environment include="Development">
         <!--[if lte IE 8]><script src="~/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="~/css/main.css" asp-append-version="false" />
-        <link rel="stylesheet" href="~/css/font-awesome.min.css" asp-append-version="false" />
         <!--[if lte IE 9]><link rel="stylesheet" href="~/css/ie9.css asp-append-version="false" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="~/css/ie8.css asp-append-version="false" /><![endif]-->
     </environment>
@@ -17,20 +16,20 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <div class="container body-content">
+        <div id="main">
 
-            <div id="main">
 
-                <!--  Header -->
-                @Html.Partial("~/Views/Shared/_Header.cshtml")
+            <div class="inner">
+                    <!--  Header -->
+                    @Html.Partial("~/Views/Shared/_Header.cshtml")
 
-                <div id="inner">
                     @RenderBody()
                     <hr />
-                </div>
-                <!--  Footer -->
-                @Html.Partial("~/Views/Shared/_Footer.cshtml")
 
+                    <!--  Footer -->
+                    @Html.Partial("~/Views/Shared/_Footer.cshtml")
+
+                </div>
 
             </div>
 
