@@ -7,9 +7,9 @@ namespace using_solar_power_to_save_lives.Models
 {
     public interface IParabola{
 
-        int Diameter { get; }
-        int Depth { get; }
-        int LineSegments { get; }
+        int Diameter { get; set; }
+        int Depth { get; set; }
+        int LineSegments { get; set; }
         double LinearDiameter { get; }
         int FocalLength { get; }
         double Volume { get; }
@@ -17,7 +17,6 @@ namespace using_solar_power_to_save_lives.Models
         double Area { get; }
 
         double[,] SegmentCoordinates { get; }
-
 
 
 

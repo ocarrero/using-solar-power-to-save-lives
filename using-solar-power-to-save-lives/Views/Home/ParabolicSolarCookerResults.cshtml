@@ -1,6 +1,6 @@
 ﻿@model using_solar_power_to_save_lives.Models.Parabola
 @{
-    ViewData["Title"] = "Parabola Solar Cooker Calculator";
+    ViewData["Title"] = "Parabola Solar Cooker Calculator Results";
 }
 <!-- Banner -->
 <section id="banner">
@@ -9,41 +9,27 @@
             <h1>
                 @ViewData["Title"]
             </h1>
-            <p>Let calculate the ultimate parabola for the solar cooker.</p>
+            <p>Results</p>
 
-            <form asp-controller="Home" asp-action="ParabolicSolarCookerResults" method="post" role="form">
-                <div class="form-horizontal">
-                    <div asp-validation-summary="All" class="text-danger"></div>
 
-                    <!-- Diameter -->
-                    <label asp-for="Diameter"></label>
-                    <div>
-                        <input asp-for="Diameter" class="form-control" />
-                        <span asp-validation-for="Diameter" class="text-danger"></span>
-                    </div>
-                    <!-- Depth -->
-                    <label asp-for="Depth" class="col-md-2 control-label"></label>
-                    <div>
-                        <input asp-for="Depth" class="form-control" />
-                        <span asp-validation-for="Depth" class="text-danger"></span>
-                    </div>
-                    <!-- LineSegments -->
-                    <label asp-for="LineSegments"></label>
-                    <div>
-                        <input asp-for="LineSegments" class="form-control" />
-                        <span asp-validation-for="LineSegments" class="text-danger"></span>
-                    </div>
-                    <!-- Create -->
-                    <div class="form-group">
-                        
-                    <input type="submit" value="Calculate" class="button big"/>
-                     
-
-                    </div>
-                </div>
-            </form>
         </header>
+        <section>
+            <h2>
+                Parabolic Properties  Results
+            </h2>
+            @if (Model != null)
+            {
 
+        <dl>
+            <dd>Area: @Model.Area</dd>
+            <dd>Focal Length: @Model.FocalLength</dd>
+            <dd>Focal Length Diameter: @Model.FocalLengthDiameter</dd>
+            <dd>Linear Diameter: @Model.LinearDiameter</dd>
+            <dd>Volume: @Model.Volume</dd>
+        </dl>
+        }
+        </section>
+  
     </div>
 </section>
 

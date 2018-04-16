@@ -22,6 +22,13 @@ namespace using_solar_power_to_save_lives.Controllers
             return View("About");
         }
 
+        public IActionResult LearnMore()
+        {
+            ViewData["Message"] = "Add page content for the view.";
+
+            return View("LearnMore");
+        }
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
@@ -31,17 +38,39 @@ namespace using_solar_power_to_save_lives.Controllers
 
         public IActionResult ParabolicSolarCookerHowTo()
         {
+
             ViewData["Message"] = "Your Parabola Calculator page.";
 
             return View("ParabolicSolarCookerHowTo");
+
         }
 
         public IActionResult ParabolicSolarCookerCalculator()
         {
-            ViewData["Message"] = "Your Parabola Calculator page.";
 
-            return View("ParabolicSolarCookerCalculator");
+                return View();
+  
         }
+
+        public IActionResult ParabolicSolarCookerResults(Parabola model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.Refresh();
+
+                return View(model);
+
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        //public IActionResult ParabolicSolarCookerCalculator()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Error()
         {
