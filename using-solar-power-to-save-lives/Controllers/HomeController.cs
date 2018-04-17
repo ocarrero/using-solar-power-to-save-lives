@@ -36,7 +36,7 @@ namespace using_solar_power_to_save_lives.Controllers
             return View("Contact");
         }
 
-        public IActionResult ParabolicSolarCookerHowTo()
+        public IActionResult BuildingAParabolicSolarCooker()
         {
 
             ViewData["Message"] = "Your Parabola Calculator page.";
@@ -67,10 +67,6 @@ namespace using_solar_power_to_save_lives.Controllers
             }
         }
 
-        //public IActionResult ParabolicSolarCookerCalculator()
-        //{
-        //    return View();
-        //}
 
         public IActionResult Error()
         {

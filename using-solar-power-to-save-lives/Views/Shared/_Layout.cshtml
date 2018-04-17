@@ -43,9 +43,24 @@
                     </header>
                     <ul>
                         <li><a asp-area="" asp-controller="Home" asp-action="Index">Homepage</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="QuickStart">Help! A storm is coming!</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="QuickStart">Help! We don't have clean water!</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="QuickStart">Help! We can't cook our meals!</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="LearnMore">Learn More</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerHowTo">Parabolic Solar Cooker How To</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerCalculator">Parabolic Solar Cooker Calculator</a></li>
+                        <li>
+                            <span class="opener">Solar Calculators</span>
+                            <ul>
+                                <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerCalculator">Basic Solar Device Plans</a></li>
+                                <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerCalculator">Parabolic Solar Cooker Calculator</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Basic Solar Device Plans</span>
+                            <ul>
+                                <li><a asp-area="" asp-controller="Home" asp-action="ParabolicSolarCookerHowTo">Box Solar Cooker</a></li>
+                                <li><a asp-area="" asp-controller="Home" asp-action="BuildingAParabolicSolarCooker.cshtml">Parabolic Solar Cooker</a></li>
+                            </ul>
+                        </li>
                         <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     </ul>
