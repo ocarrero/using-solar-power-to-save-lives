@@ -22,6 +22,13 @@ namespace using_solar_power_to_save_lives.Controllers
             return View("About");
         }
 
+        public IActionResult QuickStart()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View("QuickStart");
+        }
+
         public IActionResult LearnMore()
         {
             ViewData["Message"] = "Add page content for the view.";
@@ -66,7 +73,6 @@ namespace using_solar_power_to_save_lives.Controllers
                 return View();
             }
         }
-
 
         public IActionResult Error()
         {
